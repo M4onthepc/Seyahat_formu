@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="440.0" prefWidth="468.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="com.example.mehmetakifersoy211130012.HelloController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <children>
+      <AnchorPane prefHeight="401.0" prefWidth="474.0">
+         <children>
+            <Label graphicTextGap="2.0" layoutX="24.0" layoutY="-4.0" text="Seyahat Bilgi Girişi">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAdSoyad" layoutX="7.0" layoutY="24.0" promptText="Ad Soyad Girin" />
+            <TextField fx:id="txtBiletNo" layoutX="8.0" layoutY="61.0" promptText="Bilet Numarası Girin" />
+            <ComboBox fx:id="cmbKalkis" layoutX="7.0" layoutY="99.0" onAction="#kalkisGoster" prefWidth="150.0" promptText="Kalkış Noktası" />
+            <ComboBox fx:id="cmbVaris" layoutX="8.0" layoutY="139.0" onAction="#varisGoster" prefWidth="150.0" promptText="Varış Noktası" />
+            <Label layoutX="8.0" layoutY="177.0" text="Rezervasyon Adeti :" />
+            <Spinner fx:id="spnrAdet" layoutX="8.0" layoutY="195.0" />
+            <DatePicker fx:id="dtpTarih" layoutX="6.0" layoutY="228.0" prefHeight="26.0" prefWidth="150.0" promptText="Seyahat Tarihi" />
+            <ComboBox fx:id="cmbTuru" layoutX="6.0" layoutY="262.0" onAction="#turuSecim" prefWidth="150.0" promptText="Otobüs Türü Seçin" />
+            <Button layoutX="6.0" layoutY="320.0" mnemonicParsing="false" onAction="#sehayatKayit" prefHeight="26.0" prefWidth="150.0" text="Seyahat Kaydet">
+               <font>
+                  <Font name="Microsoft Tai Le" size="14.0" />
+               </font>
+            </Button>
+            <Label graphicTextGap="2.0" layoutX="210.0" layoutY="-4.0" text="Seyahat Bilgi Görüntüle">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbYolcu" layoutX="208.0" layoutY="25.0" onAction="#yolcuGoster" prefWidth="150.0" promptText="Yolcu Seçiniz" />
+            <TextField fx:id="txtBiletNo2" editable="false" layoutX="208.0" layoutY="62.0" promptText="Bilet Numarası" />
+            <TextField fx:id="txtKalkis" editable="false" layoutX="208.0" layoutY="100.0" promptText="Kalkış Noktası" />
+            <TextField fx:id="txtVaris" editable="false" layoutX="208.0" layoutY="140.0" promptText="Varış Noktası" />
+            <TextField fx:id="txtAdet" editable="false" layoutX="208.0" layoutY="196.0" promptText="Rezervasyon Adeti" />
+            <TextField fx:id="txtTarih" editable="false" layoutX="208.0" layoutY="229.0" promptText="Seyahat Tarihi" />
+            <TextField fx:id="txtTuru" editable="false" layoutX="208.0" layoutY="263.0" promptText="Otobüs Türü" />
+            <Button layoutX="206.0" layoutY="321.0" mnemonicParsing="false" onAction="#seyahatSil" prefHeight="26.0" prefWidth="150.0" text="Seyahat Sil" textFill="#122315">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
